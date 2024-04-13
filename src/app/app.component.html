@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="header">
+    <h1>Tarocchi</h1>
+    <h2>Pesca una carta</h2>
+  </div>
+  <div id="tavolo">
+    <div class="btn" (click)="rimescolaCarte()">rimescola il mazzo</div>
+    <div class="carte">
+      <ng-template ngFor let-i="index" let-carta [ngForOf]="carte">
+        <div class="carta" (click)="onCartaClick(carta)">
+          {{carta==cartaScoperta?carta:''}}
+        </div>
+      </ng-template>
+    </div>
+  </div>
+  <div id="carta-pescata" *ngIf="cartaScoperta>=0">
+    <div class="carta">
+      {{cartaScoperta}}
+    </div>
+    <div class="content">
+      <div class="nome">{{cartaScoperta}} {{infoCarte[cartaScoperta].nome}}</div>
+      <div class="descrizione">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquam commodo ullamcorper. Mauris aliquam elit eget lectus egestas, ac varius velit condimentum. Curabitur ut mollis neque. Nulla porta faucibus dolor. Etiam sem metus, congue vitae varius id, lobortis at nisi. Nullam pellentesque dictum ante, a gravida risus luctus luctus. Nunc et felis mattis, eleifend nisl vitae, porta eros. Maecenas nec iaculis erat, vitae laoreet lorem.
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div>
+      <p>
+        Se questa pagina ti è stata utile puoi contribuirne allo sviluppo sostenendomi con una donazione su PayPal.<br>
+        <a href="https://paypal.me/mirkio?country.x=IT&locale.x=it_IT">Il mio conto PayPal</a>
+      </p>
+      <p>
+        Per qualsiasi informazione, collaborazione, richiesta o segnalazione, puoi scrivermi alla mail <a href="mailto:mirko.lance@gmail.com">mirko.lance@gmail.com</a>.
+      </p>
+      <div>Mirko Lancerotto</div>
+      <div class="socials">
+        <a href="http://www.mirkolancerotto.it/" class="fa fa-globe"></a>
+        <a href="https://www.facebook.com/mirko.lancerotto/" class="fab fa-facebook"></a>
+        <a href="https://www.instagram.com/mirko.lancerotto/" class="fab fa-instagram"></a>
+        <a href="https://www.youtube.com/@mirkolancerotto" class="fab fa-youtube"></a>
+        <a href="https://www.tiktok.com/@mirkolancerotto" class="fab fa-tiktok"></a>
+      </div>
+    </div>
+  </div>
+</div>
