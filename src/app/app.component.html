@@ -3,19 +3,59 @@
     <h1>Tarocchi</h1>
     <h2>Pesca una carta</h2>
   </div>
-  <div id="tavolo">
-    <div class="btn" (click)="rimescolaCarte()">rimescola il mazzo</div>
-    <div class="carte">
-      <ng-template ngFor let-i="index" let-carta [ngForOf]="carte">
-        <div class="carta" (click)="onCartaClick(carta)">
-          {{carta==cartaScoperta?carta:''}}
-        </div>
-      </ng-template>
+  <div class="btn" (click)="rimescolaCarte()">rimescola il mazzo</div>
+
+  <div id="gioco-classico">
+    <div id="tavolo">
+      <div class="carte">
+        <ng-template ngFor let-i="index" let-carta [ngForOf]="carte">
+          <div class="carta"
+            (click)="onCartaClick(carta)"
+            [ngStyle]="
+              {'background-image':
+                carta==cartaScoperta?
+                  'url(/assets/tarocchi%20marsigliesi/'+cartaScoperta+'.jpeg)'
+                : 'url(/assets/tarocchi%20marsigliesi/cover.jpeg)'
+              }"
+          >
+          </div>
+        </ng-template>
+      </div>
     </div>
   </div>
+
+  <div id="gioco-geometrico">
+    <input type="number" min="3" max="22" [(ngModel)]="giocoGeometricoNumLati" (change)="onGiocoGeometricoNumLatiChange()">
+    <div id="tavolo">
+      <div class="carte">
+        <ng-template ngFor let-i="index" let-carta [ngForOf]="carte">
+          <div class="carta"
+            (click)="onCartaClick(carta)"
+            [class.hide]="i>=giocoGeometricoNumLati"
+            [ngStyle]="
+              {'background-image':
+                carta==cartaScoperta?
+                  'url(/assets/tarocchi%20marsigliesi/'+cartaScoperta+'.jpeg)'
+                : 'url(/assets/tarocchi%20marsigliesi/cover.jpeg)',
+
+                'transform': '
+                  translate(-50%,-50%)
+                  rotate('+(0+ 1*giocoGeometricoCartaPos[i][0])+'deg)
+                  translateY('+(90+50*giocoGeometricoCartaPos[i][1])+'px)
+                ',
+                'z-index': giocoGeometricoCartaPos[i][2]
+              }"
+          >
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+
+
   <div id="carta-pescata" *ngIf="cartaScoperta>=0">
-    <div class="carta">
-      {{cartaScoperta}}
+    <div class="carta" [ngStyle]="{'background-image': 'url(/assets/tarocchi%20marsigliesi/'+cartaScoperta+'.jpeg)'}">
+
     </div>
     <div class="content">
       <div class="nome">{{cartaScoperta}} {{infoCarte[cartaScoperta].nome}}</div>

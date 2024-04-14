@@ -1,3 +1,6 @@
+// lato/altezza
+$rateoDimensioneCarta: 417/800
+
 .header
   h1
     margin: 0
@@ -16,31 +19,63 @@
   margin-bottom: 10px
 
 #tavolo
-  display: flex
-  flex-direction: column
-  align-items: center
-  padding: 10px 20px
   .carte
-    display: flex
-    flex-wrap: wrap
-    justify-content: center
-    max-width: 680px
     .carta
+      background: white
       width: 50px
-      height: 100px
+      height: 50px / $rateoDimensioneCarta
       border: 1px solid
       border-radius: 3px
       margin: 5px 3px
       cursor: pointer
+      background-position: center
+      background-size: cover
+
+#gioco-classico
+  #tavolo
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 10px 20px
+    .carte
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      max-width: 680px
+      .carta
+
+#gioco-geometrico
+  #tavolo
+    background: transparent
+    padding: 50px
+    .carte
+      position: relative
+      width: 200px
+      height: 200px
+      .carta
+        position: absolute
+        left: 50%
+        top: 50%
+        z-index: 10
+        transform: translate(-50%,-50%)
+        transition: transform 0.2s linear
+        &:hover
+        &.hide
+          opacity: 0
+          width: 0
+          height: 0
+          z-index: -1
 
 #carta-pescata
   display: flex
   max-width: 500px
   .carta
     min-width: 190px
-    height: 300px
+    height: 190px / $rateoDimensioneCarta
     border: 1px solid
     border-radius: 3px
+    background-position: center
+    background-size: cover
   .content
     padding: 10px 0 0 25px
     text-align: left
