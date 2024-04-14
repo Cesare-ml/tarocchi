@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'sinodi-finder'`, () => {
+  it(`should have as title 'tarocchi'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('sinodi-finder');
+    expect(app.title).toEqual('tarocchi');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('sinodi-finder app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('tarocchi app is running!');
   });
 });

@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/sinodi-finder'),
+      dir: require('path').join(__dirname, './coverage/tarocchi'),
       subdir: '.',
       reporters: [
         { type: 'html' },

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "sinodi-finder": {
+    "tarocchi": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -65,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "sinodi-finder:build"
+            "browserTarget": "tarocchi:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "sinodi-finder:build:production"
+              "browserTarget": "tarocchi:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "sinodi-finder:build"
+            "browserTarget": "tarocchi:build"
           }
         },
         "test": {
@@ -113,16 +113,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "sinodi-finder:serve"
+            "devServerTarget": "tarocchi:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "sinodi-finder:serve:production"
+              "devServerTarget": "tarocchi:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "sinodi-finder"
+  "defaultProject": "tarocchi"
 }
