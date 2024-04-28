@@ -4,10 +4,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // <== add th
 import { CommonModule } from '@angular/common';
 
 import { AppComponent } from './app.component';
+import { TarocchiTemaAstraleComponent } from './tarocchi-tema-astrale/tarocchi-tema-astrale.component';
+import { GiocoGeometricoComponent } from './gioco-geometrico/gioco-geometrico.component';
+import { PescaUnaCartaClassicoComponent } from './pesca-una-carta-classico/pesca-una-carta-classico.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TarocchiTemaAstraleComponent,
+    GiocoGeometricoComponent,
+    PescaUnaCartaClassicoComponent
   ],
   imports: [
     CommonModule,

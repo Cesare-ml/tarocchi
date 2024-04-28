@@ -1,0 +1,38 @@
+
+<div
+  *ngIf="mostraRimescolaIlMazzo"
+  class="btn"
+  (click)="rimescolaCarte()"
+>rimescola il mazzo {{mostraRimescolaIlMazzo}}</div>
+<div id="gioco-geometrico">
+  <input
+    *ngIf="!isNumLatiPredefinito"
+    type="number" min="3" max="22"
+    [(ngModel)]="giocoGeometricoNumLati"
+    (change)="onGiocoGeometricoNumLatiChange()"
+  >
+  <div id="tavolo">
+    <div class="carte">
+      <ng-template ngFor let-i="index" let-carta [ngForOf]="carte">
+        <div class="carta"
+          (click)="onCartaClick(carta)"
+          [class.hide]="i>=giocoGeometricoNumLati"
+          [ngStyle]="
+            {'background-image':
+              carta==cartaScoperta || tutteLeCarteScoperte?
+                'url(/assets/tarocchi%20marsigliesi/'+carta+'.jpeg)'
+              : 'url(/assets/tarocchi%20marsigliesi/cover.jpeg)',
+
+              'transform': '
+                translate(-50%,-50%)
+                rotate('+(0+ 1*giocoGeometricoCartaPos[i][0])+'deg)
+                translateY('+(90+50*giocoGeometricoCartaPos[i][1])+'px)
+              ',
+              'z-index': giocoGeometricoCartaPos[i][2]
+            }"
+        >
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</div>

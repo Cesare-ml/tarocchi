@@ -1,0 +1,21 @@
+<div>
+  <div class="btn" (click)="rimescolaCarte()">rimescola il mazzo</div>
+</div>
+<div id="gioco-classico">
+  <div id="tavolo">
+    <div class="carte">
+      <ng-template ngFor let-i="index" let-carta [ngForOf]="carte">
+        <div class="carta"
+          (click)="onCartaClick(carta)"
+          [ngStyle]="
+            {'background-image':
+              carta==cartaScoperta?
+                'url(/assets/tarocchi%20marsigliesi/'+cartaScoperta+'.jpeg)'
+              : 'url(/assets/tarocchi%20marsigliesi/cover.jpeg)'
+            }"
+        >
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</div>

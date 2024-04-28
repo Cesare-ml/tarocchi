@@ -1,71 +1,52 @@
-<div class="container">
-  <div class="header">
-    <h1>Tarocchi</h1>
-    <h2>Pesca una carta</h2>
-  </div>
-  <div class="btn" (click)="rimescolaCarte()">rimescola il mazzo</div>
 
-  <div id="gioco-classico">
-    <div id="tavolo">
-      <div class="carte">
-        <ng-template ngFor let-i="index" let-carta [ngForOf]="carte">
-          <div class="carta"
-            (click)="onCartaClick(carta)"
-            [ngStyle]="
-              {'background-image':
-                carta==cartaScoperta?
-                  'url(/assets/tarocchi%20marsigliesi/'+cartaScoperta+'.jpeg)'
-                : 'url(/assets/tarocchi%20marsigliesi/cover.jpeg)'
-              }"
-          >
-          </div>
-        </ng-template>
+<div class="header">
+  <h1>Tarocchi</h1>
+</div>
+
+<div id="pesca-una-carta">
+  <div class="container">
+    <h2>Pesca Una Carta</h2>
+    <app-pesca-una-carta-classico
+      (cartaClick)="cartaScoperta = $event">
+    </app-pesca-una-carta-classico>
+  </div>
+</div>
+
+<div id="tema-del-giorno">
+  <div class="container">
+    <h2>Tema Del Giorno</h2>
+    <p>Una carta per ogni casa del tuo tema natale di oggi.</p>
+    <app-gioco-geometrico
+      giocoGeometricoNumLatiPredefinito="12"
+      tutteLeCarteScoperte="true"
+      mostraRimescolaIlMazzo="false"
+      (cartaClick)="cartaScoperta = $event"
+    ></app-gioco-geometrico>
+  </div>
+</div>
+
+<div id="carta-pescata" *ngIf="cartaScoperta>=0">
+  <div class="container">
+    <div class="inner">
+      <div class="carta" [ngStyle]="{'background-image': 'url(/assets/tarocchi%20marsigliesi/'+cartaScoperta+'.jpeg)'}">
+
+      </div>
+      <div class="content">
+        <div class="nome">{{cartaScoperta?cartaScoperta:''}} {{infoCarte[cartaScoperta].nome}}</div>
+        <div class="descrizione">
+          {{tarocchiDescrizione[cartaScoperta]}}
+        </div>
       </div>
     </div>
   </div>
+</div>
 
-  <div id="gioco-geometrico">
-    <input type="number" min="3" max="22" [(ngModel)]="giocoGeometricoNumLati" (change)="onGiocoGeometricoNumLatiChange()">
-    <div id="tavolo">
-      <div class="carte">
-        <ng-template ngFor let-i="index" let-carta [ngForOf]="carte">
-          <div class="carta"
-            (click)="onCartaClick(carta)"
-            [class.hide]="i>=giocoGeometricoNumLati"
-            [ngStyle]="
-              {'background-image':
-                carta==cartaScoperta?
-                  'url(/assets/tarocchi%20marsigliesi/'+cartaScoperta+'.jpeg)'
-                : 'url(/assets/tarocchi%20marsigliesi/cover.jpeg)',
-
-                'transform': '
-                  translate(-50%,-50%)
-                  rotate('+(0+ 1*giocoGeometricoCartaPos[i][0])+'deg)
-                  translateY('+(90+50*giocoGeometricoCartaPos[i][1])+'px)
-                ',
-                'z-index': giocoGeometricoCartaPos[i][2]
-              }"
-          >
-          </div>
-        </ng-template>
-      </div>
-    </div>
-  </div>
-
-
-  <div id="carta-pescata" *ngIf="cartaScoperta>=0">
-    <div class="carta" [ngStyle]="{'background-image': 'url(/assets/tarocchi%20marsigliesi/'+cartaScoperta+'.jpeg)'}">
-
-    </div>
-    <div class="content">
-      <div class="nome">{{cartaScoperta}} {{infoCarte[cartaScoperta].nome}}</div>
-      <div class="descrizione">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquam commodo ullamcorper. Mauris aliquam elit eget lectus egestas, ac varius velit condimentum. Curabitur ut mollis neque. Nulla porta faucibus dolor. Etiam sem metus, congue vitae varius id, lobortis at nisi. Nullam pellentesque dictum ante, a gravida risus luctus luctus. Nunc et felis mattis, eleifend nisl vitae, porta eros. Maecenas nec iaculis erat, vitae laoreet lorem.
-      </div>
-    </div>
-  </div>
-  <div class="footer">
+<div class="footer">
+  <div class="container">
     <div>
+      <p>
+        Con la collaborazione di <a href="https://www.instagram.com/perleastrologiche/">Riccardo Pruner</a> e <a href="https://www.stefanocetani.com/">Stefano Cetani</a>.
+      </p>
       <p>
         Se questa pagina ti è stata utile puoi contribuirne allo sviluppo sostenendomi con una donazione su PayPal.<br>
         <a href="https://paypal.me/mirkio?country.x=IT&locale.x=it_IT">Il mio conto PayPal</a>
