@@ -12,6 +12,90 @@ module.exports = __webpack_require__(/*! /Volumes/Mirk/GitHub/tarocchi/src/main.
 
 /***/ }),
 
+/***/ "7oZJ":
+/*!********************************************************************************!*\
+  !*** ./src/app/pesca-una-carta-classico/pesca-una-carta-classico.component.ts ***!
+  \********************************************************************************/
+/*! exports provided: PescaUnaCartaClassicoComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PescaUnaCartaClassicoComponent", function() { return PescaUnaCartaClassicoComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "ofXK");
+
+
+
+
+const _c0 = function (a0) { return { "background-image": a0 }; };
+function PescaUnaCartaClassicoComponent_ng_template_6_Template(rf, ctx) { if (rf & 1) {
+    const _r4 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function PescaUnaCartaClassicoComponent_ng_template_6_Template_div_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r4); const carta_r2 = ctx.$implicit; const ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r3.onCartaClick(carta_r2); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const carta_r2 = ctx.$implicit;
+    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction1"](1, _c0, carta_r2 == ctx_r0.cartaScoperta ? "url(/assets/tarocchi%20marsigliesi/" + ctx_r0.cartaScoperta + ".jpeg)" : "url(/assets/tarocchi%20marsigliesi/cover.jpeg)"));
+} }
+class PescaUnaCartaClassicoComponent {
+    constructor() {
+        this.cartaClick = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.carte = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21];
+        this.cartaScoperta = -1;
+    }
+    ngOnInit() {
+        this.rimescolaCarte();
+    }
+    rimescolaCarte() {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            this.cartaScoperta = -1;
+            for (let i = this.carte.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * this.carte.length);
+                [this.carte[i], this.carte[j]] = [this.carte[j], this.carte[i]];
+            }
+        });
+    }
+    onCartaClick(i) {
+        this.cartaScoperta = i;
+        this.cartaClick.emit(i);
+    }
+}
+PescaUnaCartaClassicoComponent.ɵfac = function PescaUnaCartaClassicoComponent_Factory(t) { return new (t || PescaUnaCartaClassicoComponent)(); };
+PescaUnaCartaClassicoComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: PescaUnaCartaClassicoComponent, selectors: [["app-pesca-una-carta-classico"]], outputs: { cartaClick: "cartaClick" }, decls: 7, vars: 1, consts: [[1, "btn", 3, "click"], ["id", "gioco-classico"], ["id", "tavolo"], [1, "carte"], ["ngFor", "", 3, "ngForOf"], [1, "carta", 3, "ngStyle", "click"]], template: function PescaUnaCartaClassicoComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function PescaUnaCartaClassicoComponent_Template_div_click_1_listener() { return ctx.rimescolaCarte(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2, "rimescola il mazzo");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "div", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "div", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "div", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](6, PescaUnaCartaClassicoComponent_ng_template_6_Template, 1, 3, "ng-template", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngForOf", ctx.carte);
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgStyle"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJwZXNjYS11bmEtY2FydGEtY2xhc3NpY28uY29tcG9uZW50LnNhc3MifQ== */"] });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](PescaUnaCartaClassicoComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
+        args: [{
+                selector: 'app-pesca-una-carta-classico',
+                templateUrl: './pesca-una-carta-classico.component.html',
+                styleUrls: ['./pesca-una-carta-classico.component.sass']
+            }]
+    }], function () { return []; }, { cartaClick: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }] }); })();
+
+
+/***/ }),
+
 /***/ "AytR":
 /*!*****************************************!*\
   !*** ./src/environments/environment.ts ***!
@@ -37,6 +121,191 @@ const environment = {
  */
 // import 'zone.js/dist/zone-error';  // Included with Angular CLI.
 
+
+/***/ }),
+
+/***/ "HP82":
+/*!****************************************************************!*\
+  !*** ./src/app/gioco-geometrico/gioco-geometrico.component.ts ***!
+  \****************************************************************/
+/*! exports provided: GiocoGeometricoComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GiocoGeometricoComponent", function() { return GiocoGeometricoComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ "wd/R");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _assets_json_marsigliesi_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../assets/json/marsigliesi.json */ "bdeQ");
+var _assets_json_marsigliesi_json__WEBPACK_IMPORTED_MODULE_3___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../../assets/json/marsigliesi.json */ "bdeQ", 1);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "ofXK");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
+
+
+
+
+
+
+
+function GiocoGeometricoComponent_div_0_Template(rf, ctx) { if (rf & 1) {
+    const _r4 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function GiocoGeometricoComponent_div_0_Template_div_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r4); const ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r3.rimescolaCarte(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"]("rimescola il mazzo ", ctx_r0.mostraRimescolaIlMazzo, "");
+} }
+function GiocoGeometricoComponent_input_2_Template(rf, ctx) { if (rf & 1) {
+    const _r6 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "input", 7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("ngModelChange", function GiocoGeometricoComponent_input_2_Template_input_ngModelChange_0_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r6); const ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r5.giocoGeometricoNumLati = $event; })("change", function GiocoGeometricoComponent_input_2_Template_input_change_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r6); const ctx_r7 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r7.onGiocoGeometricoNumLatiChange(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngModel", ctx_r1.giocoGeometricoNumLati);
+} }
+const _c0 = function (a0, a1, a2) { return { "background-image": a0, "transform": a1, "z-index": a2 }; };
+function GiocoGeometricoComponent_ng_template_5_Template(rf, ctx) { if (rf & 1) {
+    const _r11 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 8);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function GiocoGeometricoComponent_ng_template_5_Template_div_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r11); const carta_r9 = ctx.$implicit; const ctx_r10 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r10.onCartaClick(carta_r9); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const i_r8 = ctx.index;
+    const carta_r9 = ctx.$implicit;
+    const ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassProp"]("hide", i_r8 >= ctx_r2.giocoGeometricoNumLati);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction3"](3, _c0, carta_r9 == ctx_r2.cartaScoperta || ctx_r2.tutteLeCarteScoperte ? "url(/assets/tarocchi%20marsigliesi/" + carta_r9 + ".jpeg)" : "url(/assets/tarocchi%20marsigliesi/cover.jpeg)", "\n                translate(-50%,-50%)\n                rotate(" + (0 + 1 * ctx_r2.giocoGeometricoCartaPos[i_r8][0]) + "deg)\n                translateY(" + (90 + 50 * ctx_r2.giocoGeometricoCartaPos[i_r8][1]) + "px)\n              ", ctx_r2.giocoGeometricoCartaPos[i_r8][2]));
+} }
+moment__WEBPACK_IMPORTED_MODULE_2___default.a.locale('it');
+const delay = ms => new Promise(res => setTimeout(res, ms));
+class GiocoGeometricoComponent {
+    constructor() {
+        this.carte = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21];
+        this.infoCarte = _assets_json_marsigliesi_json__WEBPACK_IMPORTED_MODULE_3__;
+        this.cartaScoperta = -1;
+        this.giocoGeometricoNumLati = 6;
+        this.isNumLatiPredefinito = false;
+        this._mostraRimescolaIlMazzo = true;
+        this._tutteLeCarteScoperte = false;
+        this.cartaClick = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.giocoGeometricoCartaPosInit();
+        this.giocoGeometricoCartaPosCalc();
+    }
+    set mostraRimescolaIlMazzo(b) {
+        this._mostraRimescolaIlMazzo = (b == "true");
+    }
+    get mostraRimescolaIlMazzo() {
+        return this._mostraRimescolaIlMazzo;
+    }
+    set tutteLeCarteScoperte(b) {
+        this._tutteLeCarteScoperte = (b == "true");
+    }
+    get tutteLeCarteScoperte() {
+        return this._tutteLeCarteScoperte;
+    }
+    set giocoGeometricoNumLatiPredefinito(n) {
+        if (n >= 3 && n <= 22) {
+            this.isNumLatiPredefinito = true;
+            this.giocoGeometricoNumLati = n;
+        }
+        else {
+            this.isNumLatiPredefinito = false;
+        }
+    }
+    ngOnInit() {
+        this.rimescolaCarte();
+    }
+    rimescolaCarte() {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            this.giocoGeometricoCartaPosInit();
+            yield delay(300);
+            this.cartaScoperta = -1;
+            for (let i = this.carte.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * this.carte.length);
+                [this.carte[i], this.carte[j]] = [this.carte[j], this.carte[i]];
+            }
+            this.giocoGeometricoCartaPosInit();
+            yield delay(300);
+            this.giocoGeometricoCartaPosCalc();
+        });
+    }
+    onCartaClick(i) {
+        this.cartaScoperta = i;
+        this.cartaClick.emit(i);
+    }
+    onGiocoGeometricoNumLatiChange() {
+        this.giocoGeometricoCartaPosCalc();
+    }
+    giocoGeometricoCartaPosInit() {
+        this.giocoGeometricoCartaPos = [];
+        for (var i = 0; i < this.carte.length; i++) {
+            this.giocoGeometricoCartaPos[i] = [0, 0, 0]; //rotate,transform
+        }
+    }
+    giocoGeometricoCartaPosCalc() {
+        var zIndexMax = Math.trunc(this.carte.length / this.giocoGeometricoNumLati);
+        for (var i = 0; i < this.carte.length; i++) {
+            var livello = Math.trunc(i / this.giocoGeometricoNumLati);
+            var zIndex = zIndexMax - Math.trunc((i / this.giocoGeometricoNumLati));
+            var lato = i % this.giocoGeometricoNumLati;
+            var deg = 360 * lato / this.giocoGeometricoNumLati;
+            this.giocoGeometricoCartaPos[i] = [deg, livello, zIndex]; //degOffs si o no,rotate,transform,zindex
+        }
+    }
+}
+GiocoGeometricoComponent.ɵfac = function GiocoGeometricoComponent_Factory(t) { return new (t || GiocoGeometricoComponent)(); };
+GiocoGeometricoComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: GiocoGeometricoComponent, selectors: [["app-gioco-geometrico"]], inputs: { mostraRimescolaIlMazzo: "mostraRimescolaIlMazzo", tutteLeCarteScoperte: "tutteLeCarteScoperte", giocoGeometricoNumLatiPredefinito: "giocoGeometricoNumLatiPredefinito" }, outputs: { cartaClick: "cartaClick" }, decls: 6, vars: 3, consts: [["class", "btn", 3, "click", 4, "ngIf"], ["id", "gioco-geometrico"], ["type", "number", "min", "3", "max", "22", 3, "ngModel", "ngModelChange", "change", 4, "ngIf"], ["id", "tavolo"], [1, "carte"], ["ngFor", "", 3, "ngForOf"], [1, "btn", 3, "click"], ["type", "number", "min", "3", "max", "22", 3, "ngModel", "ngModelChange", "change"], [1, "carta", 3, "ngStyle", "click"]], template: function GiocoGeometricoComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](0, GiocoGeometricoComponent_div_0_Template, 2, 1, "div", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, GiocoGeometricoComponent_input_2_Template, 1, 1, "input", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "div", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "div", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](5, GiocoGeometricoComponent_ng_template_5_Template, 1, 7, "ng-template", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.mostraRimescolaIlMazzo);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.isNumLatiPredefinito);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngForOf", ctx.carte);
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_4__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgForOf"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["NumberValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["NgModel"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgStyle"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJnaW9jby1nZW9tZXRyaWNvLmNvbXBvbmVudC5zYXNzIn0= */"], encapsulation: 2 });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](GiocoGeometricoComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
+        args: [{
+                selector: 'app-gioco-geometrico',
+                templateUrl: './gioco-geometrico.component.html',
+                styleUrls: ['./gioco-geometrico.component.sass'],
+                encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewEncapsulation"].None
+            }]
+    }], function () { return []; }, { mostraRimescolaIlMazzo: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }], tutteLeCarteScoperte: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }], giocoGeometricoNumLatiPredefinito: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }], cartaClick: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }] }); })();
+
+
+/***/ }),
+
+/***/ "PQr0":
+/*!***************************************************!*\
+  !*** ./src/assets/json/tarocchi-descrizione.json ***!
+  \***************************************************/
+/*! exports provided: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("[\"Potenziale d'onda, Indefinito, Libertà, Follia, In cammino verso un evoluzione, Nomade , Desiderio, Pellegrino, Portarsi l'essenziale, Visionario, Procedere verso lo sviluppo di ogni potenzialità umana.\",\"Operare, fare con ciò che si ha a disposizione, Inizio, Tutto si può fare, Lavoro, Inizio della ricerca della saggezza, Volonta di creare, arraffazzonarsi.\",\"Sono il canale di un sapere, Accumulare, Ricevere, Madre divina, Donna frigida, Donna passiva Solitudine, Silenzio, Meditazione, Consiglio disinteressato.\",\"Donna emancipata, Donna attiva, Iniziativa, Invadenza, Donna dominante, Celebrità, Comando, Sò quello che voglio. Saper agire, Non farsi influenzare.\",\"Padre dominante, Potenza, Energia materiale, Agire senza sforzo, Consapevolezza del proprio valore, Nel momento in cui viene riconosciuto il mio valore sono influente sugli altri, Stabilità.\",\"Mediatore, Ideale, Autorità ispirata, Conoscenza, Fanatismo, Saper convincere gli altri, saper guidare gli altri essendo guidati dalla propria fede.\",\"Incertezza, Tentazione, Scegliere guidati dalla convenienza, Scegliere guidati dalla passione.\",\"Agire guidati dalla propria passione, Viaggio, Trionfo, Amante, Talento, Saper gestire le proprie diversità.\",\"Equilibrio, Saper discriminare senza coinvolgimenti emotivi, Inflessibilità, Leggi cosmiche, Lucidità, Meritocrazia, Voler tendere ad una perfezione, Valutare.\",\"Saggezza, Prudenza, Procedere in solitaria, Saper mostrare la strada agli altri nei momenti bui della vita, Conoscenza dell'occulto, Introspezione, Vita interiore.\",\"Opportunità, Imprevisto, Ripetizione di un ciclo, Tutto cambia per non cambiare niente, Agire condizionati dalle circostanze, Circolazione, Essere in un circuito chiuso.\",\"Lo spirito che controlla il desiderio, che controlla le pulsioni,Armonia tra intelletto e sessualità, Autodisciplina, Trattare con dolcezza situazioni aggressive, Donna frigida che ha paura dell'orgasmo, Forza Morale.\",\"Cambio di prospettiva, Essere sospesi, Attesa, Autopunizione, Raggiungere il vuoto mentale.\",\"Trasformazione profonda, Setacciare, Ricercare in profondità, Fine di un illusione, Perdita, Morte, Distruzione, Lavoro, sull'inconscio, Cambiamento radicale.\",\"Saper gestire le distanze per far scorre le energie correttamente, Armonia, Circolazione interna, Aiuto divino, Purificazione dell'anima, Moderazione.\",\"Forze sessuali, Bestialità, Rapporto con l'ombra, Rapporto col potere, Rapporto con le perversioni, Rapporto con le dipendenze.\",\"Crollo di una struttura, apertura mentale, festeggiamenti, Liberazione, Eiaculazione, Colpo di genio, lasciar circolare l'energia sessuale, Illuminazione.\",\"Dono di sé al mondo, Aiuto provvidenziale, Amore universale, Spreco della propria energia, Azione altruistica, Sacralizzare un luogo, Pace.\",\"Unione dei progetti, ci si incontra nelle risorse e negli istinti, creare un luogo sicuro, protetto.\",\"Costruzione di un opera comune, Successo, Felicità, Luce, dare energia ad un progetto condiviso, Gloria, Coscienza realizzata, Solidarietà.\",\"Brusco risveglio, Annuncio, Messaggio, RinascitaNascita della coscienza superiore, Contemplazione, Rivelazione, Fede, Adorazione, Consacrazone, Virtù.\",\"Compimento, Realizzazione nel mondo, Essere se stessi nel mondo, sapersi proteggere dal mondo, Anima universale, Apertura, Donna Ideale. Saper manifestare se stessi nel mondo.\"]");
 
 /***/ }),
 
@@ -356,14 +625,17 @@ webpackContext.id = "RnhZ";
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ "wd/R");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _assets_json_marsigliesi_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/json/marsigliesi.json */ "bdeQ");
-var _assets_json_marsigliesi_json__WEBPACK_IMPORTED_MODULE_3___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../assets/json/marsigliesi.json */ "bdeQ", 1);
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "ofXK");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "wd/R");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _assets_json_marsigliesi_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../assets/json/marsigliesi.json */ "bdeQ");
+var _assets_json_marsigliesi_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../assets/json/marsigliesi.json */ "bdeQ", 1);
+/* harmony import */ var _assets_json_tarocchi_descrizione_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/json/tarocchi-descrizione.json */ "PQr0");
+var _assets_json_tarocchi_descrizione_json__WEBPACK_IMPORTED_MODULE_3___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../assets/json/tarocchi-descrizione.json */ "PQr0", 1);
+/* harmony import */ var _pesca_una_carta_classico_pesca_una_carta_classico_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pesca-una-carta-classico/pesca-una-carta-classico.component */ "7oZJ");
+/* harmony import */ var _gioco_geometrico_gioco_geometrico_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./gioco-geometrico/gioco-geometrico.component */ "HP82");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common */ "ofXK");
+
 
 
 
@@ -372,173 +644,118 @@ var _assets_json_marsigliesi_json__WEBPACK_IMPORTED_MODULE_3___namespace = /*#__
 
 
 const _c0 = function (a0) { return { "background-image": a0 }; };
-function AppComponent_ng_template_11_Template(rf, ctx) { if (rf & 1) {
-    const _r6 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 19);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function AppComponent_ng_template_11_Template_div_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r6); const carta_r4 = ctx.$implicit; const ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r5.onCartaClick(carta_r4); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+function AppComponent_div_15_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 18);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 19);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "div", 20);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 21);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div", 22);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "div", 23);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const carta_r4 = ctx.$implicit;
-    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction1"](1, _c0, carta_r4 == ctx_r0.cartaScoperta ? "url(/assets/tarocchi%20marsigliesi/" + ctx_r0.cartaScoperta + ".jpeg)" : "url(/assets/tarocchi%20marsigliesi/cover.jpeg)"));
+    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](4, _c0, "url(/assets/tarocchi%20marsigliesi/" + ctx_r0.cartaScoperta + ".jpeg)"));
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"]("", ctx_r0.cartaScoperta ? ctx_r0.cartaScoperta : "", " ", ctx_r0.infoCarte[ctx_r0.cartaScoperta].nome, "");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", ctx_r0.tarocchiDescrizione[ctx_r0.cartaScoperta], " ");
 } }
-const _c1 = function (a0, a1, a2) { return { "background-image": a0, "transform": a1, "z-index": a2 }; };
-function AppComponent_ng_template_16_Template(rf, ctx) { if (rf & 1) {
-    const _r10 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 19);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function AppComponent_ng_template_16_Template_div_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r10); const carta_r8 = ctx.$implicit; const ctx_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r9.onCartaClick(carta_r8); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-} if (rf & 2) {
-    const i_r7 = ctx.index;
-    const carta_r8 = ctx.$implicit;
-    const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassProp"]("hide", i_r7 >= ctx_r1.giocoGeometricoNumLati);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction3"](3, _c1, carta_r8 == ctx_r1.cartaScoperta ? "url(/assets/tarocchi%20marsigliesi/" + ctx_r1.cartaScoperta + ".jpeg)" : "url(/assets/tarocchi%20marsigliesi/cover.jpeg)", "\n                  translate(-50%,-50%)\n                  rotate(" + (0 + 1 * ctx_r1.giocoGeometricoCartaPos[i_r7][0]) + "deg)\n                  translateY(" + (90 + 50 * ctx_r1.giocoGeometricoCartaPos[i_r7][1]) + "px)\n                ", ctx_r1.giocoGeometricoCartaPos[i_r7][2]));
-} }
-function AppComponent_div_17_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 20);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](1, "div", 21);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "div", 22);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "div", 23);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "div", 24);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](6, " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquam commodo ullamcorper. Mauris aliquam elit eget lectus egestas, ac varius velit condimentum. Curabitur ut mollis neque. Nulla porta faucibus dolor. Etiam sem metus, congue vitae varius id, lobortis at nisi. Nullam pellentesque dictum ante, a gravida risus luctus luctus. Nunc et felis mattis, eleifend nisl vitae, porta eros. Maecenas nec iaculis erat, vitae laoreet lorem. ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-} if (rf & 2) {
-    const ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction1"](3, _c0, "url(/assets/tarocchi%20marsigliesi/" + ctx_r2.cartaScoperta + ".jpeg)"));
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate2"]("", ctx_r2.cartaScoperta, " ", ctx_r2.infoCarte[ctx_r2.cartaScoperta].nome, "");
-} }
-moment__WEBPACK_IMPORTED_MODULE_2___default.a.locale('it');
-const delay = ms => new Promise(res => setTimeout(res, ms));
+moment__WEBPACK_IMPORTED_MODULE_1___default.a.locale('it');
 class AppComponent {
     constructor() {
-        this.carte = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21];
-        this.infoCarte = _assets_json_marsigliesi_json__WEBPACK_IMPORTED_MODULE_3__;
+        this.infoCarte = _assets_json_marsigliesi_json__WEBPACK_IMPORTED_MODULE_2__;
+        this.tarocchiDescrizione = _assets_json_tarocchi_descrizione_json__WEBPACK_IMPORTED_MODULE_3__;
         this.cartaScoperta = -1;
-        this.giocoGeometricoNumLati = 6;
-        this.giocoGeometricoCartaPosInit();
-        this.giocoGeometricoCartaPosCalc();
     }
-    ngOnInit() {
-        this.rimescolaCarte();
-    }
-    onGiocoGeometricoNumLatiChange() {
-        this.giocoGeometricoCartaPosCalc();
-    }
-    giocoGeometricoCartaPosInit() {
-        this.giocoGeometricoCartaPos = [];
-        for (var i = 0; i < this.carte.length; i++) {
-            this.giocoGeometricoCartaPos[i] = [0, 0, 0]; //rotate,transform
-        }
-    }
-    giocoGeometricoCartaPosCalc() {
-        var zIndexMax = Math.trunc(this.carte.length / this.giocoGeometricoNumLati);
-        for (var i = 0; i < this.carte.length; i++) {
-            var livello = Math.trunc(i / this.giocoGeometricoNumLati);
-            var zIndex = zIndexMax - Math.trunc((i / this.giocoGeometricoNumLati));
-            var lato = i % this.giocoGeometricoNumLati;
-            var deg = 360 * lato / this.giocoGeometricoNumLati;
-            this.giocoGeometricoCartaPos[i] = [deg, livello, zIndex]; //degOffs si o no,rotate,transform,zindex
-        }
-    }
-    rimescolaCarte() {
-        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
-            this.giocoGeometricoCartaPosInit();
-            yield delay(300);
-            this.cartaScoperta = -1;
-            for (let i = this.carte.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * this.carte.length);
-                [this.carte[i], this.carte[j]] = [this.carte[j], this.carte[i]];
-            }
-            this.giocoGeometricoCartaPosInit();
-            yield delay(300);
-            this.giocoGeometricoCartaPosCalc();
-        });
-    }
-    onCartaClick(i) {
-        this.cartaScoperta = i;
-    }
+    ngOnInit() { }
 }
 AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(); };
-AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 38, vars: 4, consts: [[1, "container"], [1, "header"], [1, "btn", 3, "click"], ["id", "gioco-classico"], ["id", "tavolo"], [1, "carte"], ["ngFor", "", 3, "ngForOf"], ["id", "gioco-geometrico"], ["type", "number", "min", "3", "max", "22", 3, "ngModel", "ngModelChange", "change"], ["id", "carta-pescata", 4, "ngIf"], [1, "footer"], ["href", "https://paypal.me/mirkio?country.x=IT&locale.x=it_IT"], ["href", "mailto:mirko.lance@gmail.com"], [1, "socials"], ["href", "http://www.mirkolancerotto.it/", 1, "fa", "fa-globe"], ["href", "https://www.facebook.com/mirko.lancerotto/", 1, "fab", "fa-facebook"], ["href", "https://www.instagram.com/mirko.lancerotto/", 1, "fab", "fa-instagram"], ["href", "https://www.youtube.com/@mirkolancerotto", 1, "fab", "fa-youtube"], ["href", "https://www.tiktok.com/@mirkolancerotto", 1, "fab", "fa-tiktok"], [1, "carta", 3, "ngStyle", "click"], ["id", "carta-pescata"], [1, "carta", 3, "ngStyle"], [1, "content"], [1, "nome"], [1, "descrizione"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "h1");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](3, "Tarocchi");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "h2");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5, "Pesca una carta");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "div", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function AppComponent_Template_div_click_6_listener() { return ctx.rimescolaCarte(); });
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](7, "rimescola il mazzo");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "div", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "div", 4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "div", 5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](11, AppComponent_ng_template_11_Template, 1, 3, "ng-template", 6);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](12, "div", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](13, "input", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("ngModelChange", function AppComponent_Template_input_ngModelChange_13_listener($event) { return ctx.giocoGeometricoNumLati = $event; })("change", function AppComponent_Template_input_change_13_listener() { return ctx.onGiocoGeometricoNumLatiChange(); });
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](14, "div", 4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](15, "div", 5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](16, AppComponent_ng_template_16_Template, 1, 7, "ng-template", 6);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](17, AppComponent_div_17_Template, 7, 5, "div", 9);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](18, "div", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](19, "div");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](20, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](21, " Se questa pagina ti \u00E8 stata utile puoi contribuirne allo sviluppo sostenendomi con una donazione su PayPal.");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](22, "br");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](23, "a", 11);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](24, "Il mio conto PayPal");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](25, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](26, " Per qualsiasi informazione, collaborazione, richiesta o segnalazione, puoi scrivermi alla mail ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](27, "a", 12);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](28, "mirko.lance@gmail.com");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](29, ". ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](30, "div");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](31, "Mirko Lancerotto");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](32, "div", 13);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](33, "a", 14);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](34, "a", 15);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](35, "a", 16);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](36, "a", 17);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](37, "a", 18);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 45, vars: 1, consts: [[1, "header"], ["id", "pesca-una-carta"], [1, "container"], [3, "cartaClick"], ["id", "tema-del-giorno"], ["giocoGeometricoNumLatiPredefinito", "12", "tutteLeCarteScoperte", "true", "mostraRimescolaIlMazzo", "false", 3, "cartaClick"], ["id", "carta-pescata", 4, "ngIf"], [1, "footer"], ["href", "https://www.instagram.com/perleastrologiche/"], ["href", "https://www.stefanocetani.com/"], ["href", "https://paypal.me/mirkio?country.x=IT&locale.x=it_IT"], ["href", "mailto:mirko.lance@gmail.com"], [1, "socials"], ["href", "http://www.mirkolancerotto.it/", 1, "fa", "fa-globe"], ["href", "https://www.facebook.com/mirko.lancerotto/", 1, "fab", "fa-facebook"], ["href", "https://www.instagram.com/mirko.lancerotto/", 1, "fab", "fa-instagram"], ["href", "https://www.youtube.com/@mirkolancerotto", 1, "fab", "fa-youtube"], ["href", "https://www.tiktok.com/@mirkolancerotto", 1, "fab", "fa-tiktok"], ["id", "carta-pescata"], [1, "inner"], [1, "carta", 3, "ngStyle"], [1, "content"], [1, "nome"], [1, "descrizione"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "h1");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Tarocchi");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "h2");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6, "Pesca Una Carta");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "app-pesca-una-carta-classico", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("cartaClick", function AppComponent_Template_app_pesca_una_carta_classico_cartaClick_7_listener($event) { return ctx.cartaScoperta = $event; });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "div", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "div", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "h2");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](11, "Tema Del Giorno");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13, "Una carta per ogni casa del tuo tema natale di oggi.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "app-gioco-geometrico", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("cartaClick", function AppComponent_Template_app_gioco_geometrico_cartaClick_14_listener($event) { return ctx.cartaScoperta = $event; });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](15, AppComponent_div_15_Template, 9, 6, "div", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "div", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "div", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "div");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](20, " Con la collaborazione di ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "a", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](22, "Riccardo Pruner");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](23, " e ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "a", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](25, "Stefano Cetani");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](26, ". ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](28, " Se questa pagina ti \u00E8 stata utile puoi contribuirne allo sviluppo sostenendomi con una donazione su PayPal.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](29, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "a", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](31, "Il mio conto PayPal");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33, " Per qualsiasi informazione, collaborazione, richiesta o segnalazione, puoi scrivermi alla mail ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "a", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](35, "mirko.lance@gmail.com");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](36, ". ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "div");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](38, "Mirko Lancerotto");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](39, "div", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](40, "a", 13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](41, "a", 14);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](42, "a", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](43, "a", 16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](44, "a", 17);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](11);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngForOf", ctx.carte);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngModel", ctx.giocoGeometricoNumLati);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngForOf", ctx.carte);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.cartaScoperta >= 0);
-    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_4__["NgForOf"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["NumberValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["NgModel"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgStyle"]], styles: [".header[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\n  margin: 0;\n}\n.header[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n  margin: 0;\n  font-size: 18px;\n  font-weight: 100;\n  color: #333;\n}\n.btn[_ngcontent-%COMP%] {\n  cursor: pointer;\n  padding: 4px 9px;\n  border: 1px solid;\n  border-radius: 2px;\n  background: #f3f3f3;\n  margin-bottom: 10px;\n}\n#tavolo[_ngcontent-%COMP%]   .carte[_ngcontent-%COMP%]   .carta[_ngcontent-%COMP%] {\n  background: white;\n  width: 50px;\n  height: 95.9232613909px;\n  border: 1px solid;\n  border-radius: 3px;\n  margin: 5px 3px;\n  cursor: pointer;\n  background-position: center;\n  background-size: cover;\n}\n#gioco-classico[_ngcontent-%COMP%]   #tavolo[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding: 10px 20px;\n}\n#gioco-classico[_ngcontent-%COMP%]   #tavolo[_ngcontent-%COMP%]   .carte[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  max-width: 680px;\n}\n#gioco-geometrico[_ngcontent-%COMP%]   #tavolo[_ngcontent-%COMP%] {\n  background: transparent;\n  padding: 50px;\n}\n#gioco-geometrico[_ngcontent-%COMP%]   #tavolo[_ngcontent-%COMP%]   .carte[_ngcontent-%COMP%] {\n  position: relative;\n  width: 200px;\n  height: 200px;\n}\n#gioco-geometrico[_ngcontent-%COMP%]   #tavolo[_ngcontent-%COMP%]   .carte[_ngcontent-%COMP%]   .carta[_ngcontent-%COMP%] {\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  z-index: 10;\n  transform: translate(-50%, -50%);\n  transition: transform 0.2s linear;\n}\n#gioco-geometrico[_ngcontent-%COMP%]   #tavolo[_ngcontent-%COMP%]   .carte[_ngcontent-%COMP%]   .carta.hide[_ngcontent-%COMP%] {\n  opacity: 0;\n  width: 0;\n  height: 0;\n  z-index: -1;\n}\n#carta-pescata[_ngcontent-%COMP%] {\n  display: flex;\n  max-width: 500px;\n}\n#carta-pescata[_ngcontent-%COMP%]   .carta[_ngcontent-%COMP%] {\n  min-width: 190px;\n  height: 364.5083932854px;\n  border: 1px solid;\n  border-radius: 3px;\n  background-position: center;\n  background-size: cover;\n}\n#carta-pescata[_ngcontent-%COMP%]   .content[_ngcontent-%COMP%] {\n  padding: 10px 0 0 25px;\n  text-align: left;\n}\n#carta-pescata[_ngcontent-%COMP%]   .content[_ngcontent-%COMP%]   .nome[_ngcontent-%COMP%] {\n  font-size: 25px;\n  margin-bottom: 10px;\n}\n#carta-pescata[_ngcontent-%COMP%]   .content[_ngcontent-%COMP%]   .descrizione[_ngcontent-%COMP%] {\n  color: #333;\n}\n.footer[_ngcontent-%COMP%] {\n  max-width: 400px;\n  padding-top: 50px;\n  margin: 0 auto;\n}\n.footer[_ngcontent-%COMP%]   .socials[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.footer[_ngcontent-%COMP%]   .socials[_ngcontent-%COMP%]   a[_ngcontent-%COMP%] {\n  padding: 5px 3px;\n  font-size: 14px;\n  text-decoration: none;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL2FwcC5jb21wb25lbnQuc2FzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFJRTtFQUNFLFNBQUE7QUFISjtBQUlFO0VBQ0UsU0FBQTtFQUNBLGVBQUE7RUFDQSxnQkFBQTtFQUNBLFdBQUE7QUFGSjtBQUlBO0VBQ0UsZUFBQTtFQUNBLGdCQUFBO0VBQ0EsaUJBQUE7RUFDQSxrQkFBQTtFQUNBLG1CQUFBO0VBQ0EsbUJBQUE7QUFERjtBQUtJO0VBQ0UsaUJBQUE7RUFDQSxXQUFBO0VBQ0EsdUJBQUE7RUFDQSxpQkFBQTtFQUNBLGtCQUFBO0VBQ0EsZUFBQTtFQUNBLGVBQUE7RUFDQSwyQkFBQTtFQUNBLHNCQUFBO0FBRk47QUFLRTtFQUNFLGFBQUE7RUFDQSxzQkFBQTtFQUNBLG1CQUFBO0VBQ0Esa0JBQUE7QUFGSjtBQUdJO0VBQ0UsYUFBQTtFQUNBLGVBQUE7RUFDQSx1QkFBQTtFQUNBLGdCQUFBO0FBRE47QUFLRTtFQUNFLHVCQUFBO0VBQ0EsYUFBQTtBQUhKO0FBSUk7RUFDRSxrQkFBQTtFQUNBLFlBQUE7RUFDQSxhQUFBO0FBRk47QUFHTTtFQUNFLGtCQUFBO0VBQ0EsU0FBQTtFQUNBLFFBQUE7RUFDQSxXQUFBO0VBQ0EsZ0NBQUE7RUFDQSxpQ0FBQTtBQURSO0FBR1E7RUFDRSxVQUFBO0VBQ0EsUUFBQTtFQUNBLFNBQUE7RUFDQSxXQUFBO0FBRFY7QUFHQTtFQUNFLGFBQUE7RUFDQSxnQkFBQTtBQUFGO0FBQ0U7RUFDRSxnQkFBQTtFQUNBLHdCQUFBO0VBQ0EsaUJBQUE7RUFDQSxrQkFBQTtFQUNBLDJCQUFBO0VBQ0Esc0JBQUE7QUFDSjtBQUFFO0VBQ0Usc0JBQUE7RUFDQSxnQkFBQTtBQUVKO0FBREk7RUFDRSxlQUFBO0VBQ0EsbUJBQUE7QUFHTjtBQUZJO0VBQ0UsV0FBQTtBQUlOO0FBRkE7RUFDRSxnQkFBQTtFQUNBLGlCQUFBO0VBQ0EsY0FBQTtBQUtGO0FBSEU7RUFDRSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSx1QkFBQTtBQUtKO0FBSEk7RUFDRSxnQkFBQTtFQUNBLGVBQUE7RUFDQSxxQkFBQTtBQUtOIiwiZmlsZSI6ImFwcC5jb21wb25lbnQuc2FzcyIsInNvdXJjZXNDb250ZW50IjpbIi8vIGxhdG8vYWx0ZXp6YVxuJHJhdGVvRGltZW5zaW9uZUNhcnRhOiA0MTcvODAwXG5cbi5oZWFkZXJcbiAgaDFcbiAgICBtYXJnaW46IDBcbiAgaDJcbiAgICBtYXJnaW46IDBcbiAgICBmb250LXNpemU6IDE4cHhcbiAgICBmb250LXdlaWdodDogMTAwXG4gICAgY29sb3I6ICMzMzNcblxuLmJ0blxuICBjdXJzb3I6IHBvaW50ZXJcbiAgcGFkZGluZzogNHB4IDlweFxuICBib3JkZXI6IDFweCBzb2xpZFxuICBib3JkZXItcmFkaXVzOiAycHhcbiAgYmFja2dyb3VuZDogI2YzZjNmM1xuICBtYXJnaW4tYm90dG9tOiAxMHB4XG5cbiN0YXZvbG9cbiAgLmNhcnRlXG4gICAgLmNhcnRhXG4gICAgICBiYWNrZ3JvdW5kOiB3aGl0ZVxuICAgICAgd2lkdGg6IDUwcHhcbiAgICAgIGhlaWdodDogNTBweCAvICRyYXRlb0RpbWVuc2lvbmVDYXJ0YVxuICAgICAgYm9yZGVyOiAxcHggc29saWRcbiAgICAgIGJvcmRlci1yYWRpdXM6IDNweFxuICAgICAgbWFyZ2luOiA1cHggM3B4XG4gICAgICBjdXJzb3I6IHBvaW50ZXJcbiAgICAgIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlclxuICAgICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlclxuXG4jZ2lvY28tY2xhc3NpY29cbiAgI3Rhdm9sb1xuICAgIGRpc3BsYXk6IGZsZXhcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uXG4gICAgYWxpZ24taXRlbXM6IGNlbnRlclxuICAgIHBhZGRpbmc6IDEwcHggMjBweFxuICAgIC5jYXJ0ZVxuICAgICAgZGlzcGxheTogZmxleFxuICAgICAgZmxleC13cmFwOiB3cmFwXG4gICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlclxuICAgICAgbWF4LXdpZHRoOiA2ODBweFxuICAgICAgLmNhcnRhXG5cbiNnaW9jby1nZW9tZXRyaWNvXG4gICN0YXZvbG9cbiAgICBiYWNrZ3JvdW5kOiB0cmFuc3BhcmVudFxuICAgIHBhZGRpbmc6IDUwcHhcbiAgICAuY2FydGVcbiAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZVxuICAgICAgd2lkdGg6IDIwMHB4XG4gICAgICBoZWlnaHQ6IDIwMHB4XG4gICAgICAuY2FydGFcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlXG4gICAgICAgIGxlZnQ6IDUwJVxuICAgICAgICB0b3A6IDUwJVxuICAgICAgICB6LWluZGV4OiAxMFxuICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLC01MCUpXG4gICAgICAgIHRyYW5zaXRpb246IHRyYW5zZm9ybSAwLjJzIGxpbmVhclxuICAgICAgICAmOmhvdmVyXG4gICAgICAgICYuaGlkZVxuICAgICAgICAgIG9wYWNpdHk6IDBcbiAgICAgICAgICB3aWR0aDogMFxuICAgICAgICAgIGhlaWdodDogMFxuICAgICAgICAgIHotaW5kZXg6IC0xXG5cbiNjYXJ0YS1wZXNjYXRhXG4gIGRpc3BsYXk6IGZsZXhcbiAgbWF4LXdpZHRoOiA1MDBweFxuICAuY2FydGFcbiAgICBtaW4td2lkdGg6IDE5MHB4XG4gICAgaGVpZ2h0OiAxOTBweCAvICRyYXRlb0RpbWVuc2lvbmVDYXJ0YVxuICAgIGJvcmRlcjogMXB4IHNvbGlkXG4gICAgYm9yZGVyLXJhZGl1czogM3B4XG4gICAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyXG4gICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlclxuICAuY29udGVudFxuICAgIHBhZGRpbmc6IDEwcHggMCAwIDI1cHhcbiAgICB0ZXh0LWFsaWduOiBsZWZ0XG4gICAgLm5vbWVcbiAgICAgIGZvbnQtc2l6ZTogMjVweFxuICAgICAgbWFyZ2luLWJvdHRvbTogMTBweFxuICAgIC5kZXNjcml6aW9uZVxuICAgICAgY29sb3I6ICMzMzNcblxuLmZvb3RlclxuICBtYXgtd2lkdGg6IDQwMHB4XG4gIHBhZGRpbmctdG9wOiA1MHB4XG4gIG1hcmdpbjogMCBhdXRvXG5cbiAgLnNvY2lhbHNcbiAgICBkaXNwbGF5OiBmbGV4XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyXG5cbiAgICBhXG4gICAgICBwYWRkaW5nOiA1cHggM3B4XG4gICAgICBmb250LXNpemU6IDE0cHhcbiAgICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZVxuIl19 */"] });
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AppComponent, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.cartaScoperta >= 0);
+    } }, directives: [_pesca_una_carta_classico_pesca_una_carta_classico_component__WEBPACK_IMPORTED_MODULE_4__["PescaUnaCartaClassicoComponent"], _gioco_geometrico_gioco_geometrico_component__WEBPACK_IMPORTED_MODULE_5__["GiocoGeometricoComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgStyle"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcHAuY29tcG9uZW50LnNhc3MifQ== */"] });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AppComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
                 selector: 'app-root',
                 templateUrl: './app.component.html',
@@ -564,9 +781,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "ofXK");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "Sy1n");
+/* harmony import */ var _tarocchi_tema_astrale_tarocchi_tema_astrale_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./tarocchi-tema-astrale/tarocchi-tema-astrale.component */ "b9ky");
+/* harmony import */ var _gioco_geometrico_gioco_geometrico_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./gioco-geometrico/gioco-geometrico.component */ "HP82");
+/* harmony import */ var _pesca_una_carta_classico_pesca_una_carta_classico_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pesca-una-carta-classico/pesca-una-carta-classico.component */ "7oZJ");
 
 
  // <== add the imports!
+
+
+
 
 
 
@@ -579,7 +802,10 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
             _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"]
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["CommonModule"],
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
+        _tarocchi_tema_astrale_tarocchi_tema_astrale_component__WEBPACK_IMPORTED_MODULE_5__["TarocchiTemaAstraleComponent"],
+        _gioco_geometrico_gioco_geometrico_component__WEBPACK_IMPORTED_MODULE_6__["GiocoGeometricoComponent"],
+        _pesca_una_carta_classico_pesca_una_carta_classico_component__WEBPACK_IMPORTED_MODULE_7__["PescaUnaCartaClassicoComponent"]], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["CommonModule"],
         _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
         _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
         _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"]] }); })();
@@ -587,7 +813,10 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
         args: [{
                 declarations: [
-                    _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]
+                    _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
+                    _tarocchi_tema_astrale_tarocchi_tema_astrale_component__WEBPACK_IMPORTED_MODULE_5__["TarocchiTemaAstraleComponent"],
+                    _gioco_geometrico_gioco_geometrico_component__WEBPACK_IMPORTED_MODULE_6__["GiocoGeometricoComponent"],
+                    _pesca_una_carta_classico_pesca_una_carta_classico_component__WEBPACK_IMPORTED_MODULE_7__["PescaUnaCartaClassicoComponent"]
                 ],
                 imports: [
                     _angular_common__WEBPACK_IMPORTED_MODULE_3__["CommonModule"],
@@ -603,6 +832,38 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
 
 /***/ }),
 
+/***/ "b9ky":
+/*!**************************************************************************!*\
+  !*** ./src/app/tarocchi-tema-astrale/tarocchi-tema-astrale.component.ts ***!
+  \**************************************************************************/
+/*! exports provided: TarocchiTemaAstraleComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TarocchiTemaAstraleComponent", function() { return TarocchiTemaAstraleComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+
+
+class TarocchiTemaAstraleComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+}
+TarocchiTemaAstraleComponent.ɵfac = function TarocchiTemaAstraleComponent_Factory(t) { return new (t || TarocchiTemaAstraleComponent)(); };
+TarocchiTemaAstraleComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: TarocchiTemaAstraleComponent, selectors: [["app-tarocchi-tema-astrale"]], decls: 0, vars: 0, template: function TarocchiTemaAstraleComponent_Template(rf, ctx) { }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJ0YXJvY2NoaS10ZW1hLWFzdHJhbGUuY29tcG9uZW50LnNhc3MifQ== */"] });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](TarocchiTemaAstraleComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'app-tarocchi-tema-astrale',
+                templateUrl: './tarocchi-tema-astrale.component.html',
+                styleUrls: ['./tarocchi-tema-astrale.component.sass']
+            }]
+    }], function () { return []; }, null); })();
+
+
+/***/ }),
+
 /***/ "bdeQ":
 /*!******************************************!*\
   !*** ./src/assets/json/marsigliesi.json ***!
@@ -610,7 +871,7 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
 /*! exports provided: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"0\":{\"nome\":\"Le Fol (Le Mat)\",\"descrizione\":\"\"},\"1\":{\"nome\":\"Le Bateleur\",\"descrizione\":\"\"},\"2\":{\"nome\":\"La Papesse\",\"descrizione\":\"\"},\"3\":{\"nome\":\"L'Impératrice\",\"descrizione\":\"\"},\"4\":{\"nome\":\"L'Empereur\",\"descrizione\":\"\"},\"5\":{\"nome\":\"Le Pape\",\"descrizione\":\"\"},\"6\":{\"nome\":\"L'Amoureux\",\"descrizione\":\"\"},\"7\":{\"nome\":\"Le Chariot\",\"descrizione\":\"\"},\"8\":{\"nome\":\"La Justice\",\"descrizione\":\"\"},\"9\":{\"nome\":\"L'Hermite\",\"descrizione\":\"\"},\"10\":{\"nome\":\"La Roue de Fortune\",\"descrizione\":\"\"},\"11\":{\"nome\":\"La Force\",\"descrizione\":\"\"},\"12\":{\"nome\":\"Le Pendu\",\"descrizione\":\"\"},\"13\":{\"nome\":\"L'Arcane sans nom\",\"descrizione\":\"\"},\"14\":{\"nome\":\"Tempérance\",\"descrizione\":\"\"},\"15\":{\"nome\":\"Le Diable\",\"descrizione\":\"\"},\"16\":{\"nome\":\"La Maison Dieu\",\"descrizione\":\"\"},\"17\":{\"nome\":\"L'Étoile\",\"descrizione\":\"\"},\"18\":{\"nome\":\"La Lune\",\"descrizione\":\"\"},\"19\":{\"nome\":\"Le Soleil\",\"descrizione\":\"\"},\"20\":{\"nome\":\"Le Jugement\",\"descrizione\":\"\"},\"21\":{\"nome\":\"Le Monde\",\"descrizione\":\"\"}}");
+module.exports = JSON.parse("{\"0\":{\"nome\":\"Il Matto\",\"descrizione\":\"\"},\"1\":{\"nome\":\"Il Bagatto\",\"descrizione\":\"\"},\"2\":{\"nome\":\"La Papessa\",\"descrizione\":\"\"},\"3\":{\"nome\":\"L'Imperatrice\",\"descrizione\":\"\"},\"4\":{\"nome\":\"L'Imperatore\",\"descrizione\":\"\"},\"5\":{\"nome\":\"Il Papa\",\"descrizione\":\"\"},\"6\":{\"nome\":\"L'Innamorato\",\"descrizione\":\"\"},\"7\":{\"nome\":\"Il Carro\",\"descrizione\":\"\"},\"8\":{\"nome\":\"La Giustizia\",\"descrizione\":\"\"},\"9\":{\"nome\":\"L'Eremita\",\"descrizione\":\"\"},\"10\":{\"nome\":\"La Ruota della Fortuna\",\"descrizione\":\"\"},\"11\":{\"nome\":\"La Forza\",\"descrizione\":\"\"},\"12\":{\"nome\":\"L'Appeso\",\"descrizione\":\"\"},\"13\":{\"nome\":\"L'Arcano Senza Nome\",\"descrizione\":\"\"},\"14\":{\"nome\":\"Temperanza\",\"descrizione\":\"\"},\"15\":{\"nome\":\"Il Diavolo\",\"descrizione\":\"\"},\"16\":{\"nome\":\"La Torre\",\"descrizione\":\"\"},\"17\":{\"nome\":\"La Stella\",\"descrizione\":\"\"},\"18\":{\"nome\":\"La Luna\",\"descrizione\":\"\"},\"19\":{\"nome\":\"Il Sole\",\"descrizione\":\"\"},\"20\":{\"nome\":\"Il Giudizio\",\"descrizione\":\"\"},\"21\":{\"nome\":\"Il Mondo\",\"descrizione\":\"\"}}");
 
 /***/ }),
 

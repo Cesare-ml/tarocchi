@@ -18,5 +18,124 @@
 .container table td {
   padding: 5px 10px;
 }
+.header {
+  text-align: center;
+}
+.header h1 {
+  margin: 0;
+}
+.header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 100;
+  color: #333;
+}
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  padding: 4px 9px;
+  border: 1px solid;
+  border-radius: 2px;
+  background: #f3f3f3;
+  margin-bottom: 10px;
+}
+#tavolo .carte .carta {
+  background: white;
+  width: 50px;
+  height: 95.9232613909px;
+  border: 1px solid;
+  border-radius: 3px;
+  margin: 5px 3px;
+  cursor: pointer;
+  background-position: center;
+  background-size: cover;
+}
+#gioco-classico #tavolo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 20px;
+}
+#gioco-classico #tavolo .carte {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 680px;
+}
+#gioco-geometrico #tavolo {
+  background: transparent;
+  padding: 50px;
+}
+#gioco-geometrico #tavolo .carte {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+#gioco-geometrico #tavolo .carte .carta {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s linear;
+}
+#gioco-geometrico #tavolo .carte .carta.hide {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  z-index: -1;
+}
+#pesca-una-carta {
+  padding: 0 0 50px;
+}
+#tema-del-giorno {
+  padding: 50px 0 50px;
+  background: #fafafa;
+}
+#tema-del-giorno h2 {
+  margin: 0;
+}
+#carta-pescata {
+  padding: 40px 0;
+  background: #eee;
+}
+#carta-pescata .inner {
+  display: flex;
+  max-width: 500px;
+}
+#carta-pescata .inner .carta {
+  min-width: 190px;
+  height: 364.5083932854px;
+  border: 1px solid;
+  border-radius: 3px;
+  background-position: center;
+  background-size: cover;
+}
+#carta-pescata .inner .content {
+  padding: 10px 0 0 25px;
+  text-align: left;
+}
+#carta-pescata .inner .content .nome {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+#carta-pescata .inner .content .descrizione {
+  color: #333;
+}
+.footer {
+  max-width: 400px;
+  padding-top: 50px;
+  margin: 0 auto;
+}
+.footer .socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer .socials a {
+  padding: 5px 3px;
+  font-size: 14px;
+  text-decoration: none;
+}
 
 /*# sourceMappingURL=styles.css.map*/
